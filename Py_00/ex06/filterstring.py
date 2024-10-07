@@ -1,20 +1,21 @@
 import sys
 
-def check_words(str):
-    print("ok")
-
+def check_words(number):
+    if number % 2 == 0:
+    #if len(str) > int(sys.argv[2]):
+        return True
+    return False
 
 def main():
     try:
         if len(sys.argv) != 3:
             raise AssertionError
-        S = sys.argv[1]
-        #N = int(sys.argv[2])
         iterable = sys.argv[1].split(" ")
-        print(S)
-        print(iterable)
-        #filtered_string = filter(check_words, S)
-        #print(list(filtered_string))
+        N = int(sys.argv[2])
+        test = ft_filter(check_words, iterable)
+        official = filter(check_words, iterable)
+        print(test)
+        print(official)
     except ValueError as e:
         print("AssertionError: the arguments are bad")
     except AssertionError:
