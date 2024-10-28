@@ -12,4 +12,4 @@ is true. If function is None, return the items that are true.
     else:
         for item in iterable:
             if item:
-                yield(item)
+                yield (item)
