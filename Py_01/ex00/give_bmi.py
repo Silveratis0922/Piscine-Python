@@ -1,4 +1,5 @@
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(height: list[int | float],
+             weight: list[int | float]) -> list[int | float]:
     """
     BMI formula is:  BMI = Weigh / Height²
     """
@@ -7,16 +8,18 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
         if len(height) != len(weight):
             raise AssertionError()
         for h, w in zip(height, weight):
-            if not isinstance(h, (int, float)) or not isinstance(w, (int, float)):
+            if not isinstance(h, (int, float)) or \
+               not isinstance(w, (int, float)):
                 raise ValueError()
         for h, w in zip(height, weight):
-            print (f"Value of h: {h}        Value of w: {w}")
             res.append(w / pow(h, 2))
         return res
     except AssertionError:
-        print("Assertion Error: Height list and weight list does not have the same size.")
+        print("Assertion Error: "
+              "Height list and weight list does not have the same size.")
     except ValueError:
         print("Value Error: Type in list must be int or float.")
+
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """

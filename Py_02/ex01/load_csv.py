@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 def load(path: str) -> pd.DataFrame:
     country = "Italy"
     df = pd.read_csv(path, index_col="country").T
