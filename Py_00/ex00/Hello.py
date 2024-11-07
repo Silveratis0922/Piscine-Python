@@ -5,7 +5,6 @@ ft_dict = {"Hello": "titi!"}
 
 ft_list[1] = "World!"
 ft_tuple = ("Hello", "France!")
-ft_set.clear()
 ft_set = {"Hello", "Paris!"}
 ft_dict["Hello"] = "42Paris!"
 

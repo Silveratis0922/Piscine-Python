@@ -3,7 +3,8 @@ import sys
 
 def read_arg(arg) -> None:
     """
-    Documentation
+    Counts and prints the number of uppercase letters, lowercase letters,
+    digits, spaces, and punctuation marks in the given text.
     """
     upper = 0
     lower = 0

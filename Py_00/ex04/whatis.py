@@ -5,7 +5,7 @@ if len(sys.argv) > 1:
     try:
         if len(sys.argv) != 2:
             raise AssertionError("more than one argument is provided")
-        arg = int(sys.argv[1])
+        arg = float(sys.argv[1])
 
         if arg % 2 == 0:
             print("I'm Even.")
