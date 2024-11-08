@@ -47,9 +47,10 @@ def main():
         res = ""
         for i in sys.argv[1]:
             res = res + morse[i.upper()]
+        res = res.rstrip()
         print(res)
     except KeyError:
-        print("Asserstion Error:the arguments are bad")
+        print("Assertion Error: the arguments are bad")
     except AssertionError:
         print("Assertion Error: the arguments are bad")
 
