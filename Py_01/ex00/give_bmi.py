@@ -1,7 +1,8 @@
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
     """
-    BMI formula is:  BMI = Weigh / Height²
+    Calculates and returns the BMI for each height-weight pair supplied.
+    BMI formula is: Weigh / Height²
     """
     try:
         res = []
