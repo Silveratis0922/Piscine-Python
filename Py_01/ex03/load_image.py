@@ -6,7 +6,7 @@ def load_image(path: str) -> np.array:
     """
     Basic fonction for load an image with pillow and return a numpy array.
     """
-    try:  
+    try:
         im = Image.open(path)
         array = np.array(im)
         print("The shape of image is:", np.shape(array))
