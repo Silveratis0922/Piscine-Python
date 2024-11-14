@@ -1,18 +1,36 @@
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def load(path: str) -> pd.DataFrame:
-    country = "Andorra"
-    df = pd.read_csv(path, index_col="country").T
-    print("Loading dataset of dimensions", df.shape)
-    plt.plot(df.index, df[country])
-    plt.title(f"{country} Life expectancy Projections")
-    plt.xlabel("Year")
-    plt.xticks(df.index[::40])
-    plt.ylabel("Life expectancy")
-    plt.show()
-    return df
+    """
+    Loads a CSV file and returns its DataFrame.
+    """
+    try:
+        if not path.endswith('.csv'):
+            raise AssertionError("Need CSV file.")
+        df = pd.read_csv(path, index_col="country").T
+        if df.empty:
+            raise AssertionError("File is empty.")
+        print("Loading dataset of dimensions", df.shape)
+        return df
+    except AssertionError as e:
+        print(f"{AssertionError.__name__}: {e}")
+    except FileNotFoundError:
+        print(f"{FileNotFoundError.__name__}: File does not exist.")
+
+
+# def load(path: str) -> pd.DataFrame:
+#     country = "Andorra"
+#     df = pd.read_csv(path, index_col="country").T
+#     print("Loading dataset of dimensions", df.shape)
+#     plt.plot(df.index, df[country])
+#     plt.title(f"{country} Life expectancy Projections")
+#     plt.xlabel("Year")
+#     plt.xticks(df.index[::40])
+#     plt.ylabel("Life expectancy")
+#     plt.show()
+#     return df
 
 
 # def load(path: str) -> pd.DataFrame: # Series Methode
