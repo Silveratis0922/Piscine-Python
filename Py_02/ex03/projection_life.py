@@ -3,9 +3,14 @@ import matplotlib.pyplot as plt
 
 
 def projection_life(df_life, df_income) -> None:
+    """
+    Plots a scatter graph of life expectancy versus GDP for a given year.
+    """
     try:
         if df_life.name != df_income.name:
             raise AssertionError("Comparaison must be on the same year.")
+        if df_life.name != '1900':
+            raise AssertionError("You must display the year 1900.")
         plt.scatter(df_income.values, df_life.values)
         plt.title(df_life.name)
         plt.xlabel("Gross domestic product")
