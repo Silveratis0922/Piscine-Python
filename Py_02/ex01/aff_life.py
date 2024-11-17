@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-def aff_life(df) -> pd.DataFrame:
+def aff_life(df) -> None:
     """
     Display the evolution of life expectancy for a given
     country on a graph using Matplotlib.
@@ -15,7 +15,6 @@ def aff_life(df) -> pd.DataFrame:
     plt.xticks(df.index[::40])
     plt.ylabel("Life expectancy")
     plt.show()
-    return df
 
 
 def main():
