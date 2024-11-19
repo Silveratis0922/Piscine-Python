@@ -13,7 +13,10 @@ class Baratheon(Character):
         self.is_alive = False
 
     def __str__(self):
-        return f"({self.family_name}, {self.eyes}, {self.hairs})"
+        return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
+
+    def __repr__(self):
+        return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
 class Lannister(Character):
     def __init__(self, first_name, is_alive=True):
@@ -27,7 +30,12 @@ class Lannister(Character):
         self.is_alive = False
 
     def __str__(self):
-        return f"({self.family_name}, {self.eyes}, {self.hairs})"
+        return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
-    #decorator
-    #def create_lannester():
+    def __repr__(self):
+        return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
+    
+    @classmethod
+    def create_lannister(cls, first_name, is_alive):
+        lannister = cls(first_name, is_alive)
+        return lannister
