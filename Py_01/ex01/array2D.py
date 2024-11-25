@@ -16,7 +16,7 @@ def slice_me(family: list, start: int, end: int) -> list:
         print("My shape is:", family_array.shape)
         new_array = family_array[start:end]
         print("My new shape is :", new_array.shape)
-        return new_array
+        return new_array.tolist()
     except ValueError:
         print(f"{ValueError.__name__}: list dont have same the size.")
     except AssertionError as e:

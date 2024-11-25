@@ -29,6 +29,9 @@ def zoom(img, size, zoom) -> np.array:
         bottom = top + size
         img = img.crop((left, top, right, bottom))
         array = np.array(img)
+        print("The shape of the image is:",
+              np.shape(np.expand_dims(array, axis=-1)), "or", np.shape(array))
+        print(array[:, :, np.newaxis])
         t_array = rotate(array, size)
         print("New shape after Transpose:", np.shape(array))
         plt.imshow(t_array, cmap='grey')
@@ -46,7 +49,7 @@ def zoom(img, size, zoom) -> np.array:
 
 def main():
     img = 'animal.jpeg'
-    print(load_image(img))
+    load_image(img)
     print(zoom(img, 400, 2))
 
 
