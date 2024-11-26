@@ -1,5 +1,4 @@
 from load_csv import load
-import pandas as pd
 import matplotlib.pyplot as plt
 
 
@@ -19,7 +18,7 @@ def aff_life(df) -> None:
 
 def main():
     df = load("life_expectancy_years.csv")
-    print(aff_life(df))
+    aff_life(df)
 
 
 if __name__ == "__main__":

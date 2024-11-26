@@ -12,7 +12,7 @@ def load(path: str) -> pd.DataFrame:
         if df.empty:
             raise AssertionError("File is empty.")
         print("Loading dataset of dimensions", df.shape)
-        return df
+        return df.head()
     except AssertionError as e:
         print(f"{AssertionError.__name__}: {e}")
     except FileNotFoundError:
