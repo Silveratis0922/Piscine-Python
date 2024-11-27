@@ -23,10 +23,12 @@ def projection_life(df_life, df_income) -> None:
 
 
 def main():
-    df_life = load("life_expectancy_years.csv")
-    df_inc = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
-    print(df_inc['1900'])
-    projection_life(df_life['1900'], df_inc['1900'])
+    try:
+        life = load("life_expectancy_years.csv")
+        inc = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
+        projection_life(life['1900'], inc['1900'])
+    except KeyboardInterrupt:
+        print(f"{AssertionError.__name__}: Program end with Ctrl + C.")
 
 
 if __name__ == "__main__":

@@ -41,8 +41,11 @@ def aff_pop(df, country_1, country_2) -> None:
 
 
 def main():
-    df = load("population_total.csv")
-    aff_pop(df, "France", "Belgium")
+    try:
+        df = load("population_total.csv")
+        aff_pop(df, "France", "Belgium")
+    except KeyboardInterrupt:
+        print(f"{AssertionError.__name__}: Program ended with Ctrl + C.")
 
 
 if __name__ == "__main__":
