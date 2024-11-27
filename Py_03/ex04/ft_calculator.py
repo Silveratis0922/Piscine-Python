@@ -6,7 +6,7 @@ class calculator:
         # for i, j in zip(V1, V2):
         #     res.append(i * j)
         # print(f"Dot product is : {sum(res)}")
-        print (sum(i * j for i, j in zip(V1, V2)))
+        print(sum(i * j for i, j in zip(V1, V2)))
 
     @staticmethod
     def add_vec(V1: list[float], V2: list[float]) -> None:

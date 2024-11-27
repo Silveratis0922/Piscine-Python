@@ -1,5 +1,6 @@
 from S1E9 import Character
 
+
 class Baratheon(Character):
     """Representing the Baratheon family."""
     def __init__(self, first_name, is_alive=True):
@@ -18,6 +19,7 @@ class Baratheon(Character):
     def __repr__(self):
         return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
+
 class Lannister(Character):
     def __init__(self, first_name, is_alive=True):
         super().__init__(first_name, is_alive)
@@ -34,7 +36,7 @@ class Lannister(Character):
 
     def __repr__(self):
         return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
-    
+
     @classmethod
     def create_lannister(cls, first_name, is_alive):
         lannister = cls(first_name, is_alive)
