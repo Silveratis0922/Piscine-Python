@@ -23,12 +23,13 @@ class calculator:
         print(self.obj)
 
     def __truediv__(self, object) -> None:
-        if object == 0:
-            raise AssertionError("Error: Division by zero.")
-        # self.obj = [i // object for i in self.obj]
-        for i in range(len(self.obj)):
-            self.obj[i] //= object
-        print(self.obj)
+        try:
+            # self.obj = [i // object for i in self.obj]
+            for i in range(len(self.obj)):
+                self.obj[i] //= object
+            print(self.obj)
+        except ZeroDivisionError:
+            print("Error: You're trying to divide by zero.")
 
 
 # Tuto list comprehension :
